@@ -16,7 +16,7 @@ Here are some features:
 Yes, with one R.
 
 ## Installing
-Load the script somewhere on the page. Then put a `<div>` somewhere with #chery as ID.
+Load `chery.js` somewhere on the page. Then put a `<div>` somewhere with #chery as ID.
 
 If you don't add an element, Chery will attach itself to the body of the page. This is for full page Chery that you can, for instance, run in an iframe.
 
