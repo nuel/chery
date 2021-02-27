@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chery</title>
+  <style>
+    body {
+      font-size: 1.3rem;
+      font-family: monospace;
+      color: #0f0;
+      background: #000;
+    }
+    main {
+      border-top:1px solid #fff;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="chery.exec('help')">HELP</button>
+    <button onclick="chery.exec('clear')">CLEAR</button>
+  </header>
+  <main id="chery" data-autofocus="true"></main>
+  <script src="app/chery.js"></script>
+  <script>
+    chery.addResponseHandler({
+      type: 'alert',
+      parse: data => {
+        window.alert(data.content)
+      }
+    })
+    chery.addResponseHandler({
+      type: 'open',
+      parse: data => {
+        window.open(data.href)
+      }
+    })
+  </script>
+</body>
+</html>
