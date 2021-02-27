@@ -21,13 +21,13 @@ Load `chery.js` somewhere on the page. Then put a `<div>` somewhere with `#chery
 If you don't add an element, Chery will attach itself to the body of the page. This is for full page Chery that you can, for instance, run in an iframe.
 
 ## Activating
-By default, Chery is inactive until you click on it. (Full page Chery is always active.) When it activates, it adds the `"active"` class to the its main element and will start listening to all keypresses in the browser window.
+By default, Chery is inactive until you click on it. (Full page Chery is always active.) When it activates, it adds the `active` class to the its main element and will start listening to all keypresses in the browser window.
 
 This way, you can start Chery collapsed or minimized, hiding its contents using CSS until it is activated. If you'd like Chery to be active when the page loads, add `data-autofocus="true"`.
 
 ## Customizing
 Chery supports a few options for customizing using data-attributes. They are:
-- `data-prefix`: The prefix for each line, defaults to `$ `.
+- `data-prefix`: The prefix for each line, defaults to `chery@1.0.0 $ `.
 - `data-cursor`: The character used for the cursor. By default that's `_`.
 - `data-motd`: The Message Of The Day, displayed when Chery starts.
 - `data-autofocus`: Activates Chery on page load, defaults to `false`.
