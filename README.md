@@ -8,7 +8,7 @@ Here are some features:
 
 - Built for the DOM, no terminal emulation -- all input and output is plain old HTML and can be styled using CSS
 - Commands are programs that spawn Web Workers to run JavaScript files
-- Sends a hang up signal to Web Worker if the command is aborted (with CTRL+C)
+- Sends a hang up signal to Web Workers if the command is aborted (with CTRL+C)
 - Built-in command history
 - Web Workers can request a frontend handler to manipulate the DOM, show an alert, navigate to a page, etcetera
 - Chery can be called programmatically from the webpage to parse commands and spawn processes
