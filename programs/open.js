@@ -12,7 +12,7 @@ self.onmessage = function (e) {
 
       // Request a handler named 'open' to parse this URL
       self.postMessage({
-        type: 'requestHandler',
+        type: 'handler',
         handler: 'open',
         href: url,
         final: true

@@ -68,7 +68,7 @@ Where `content` is an array of all arguments entered. Like in C, the first argum
 }
 ```
 
-This means you can read out the arguments inside your WebWorker script like so:
+This means you can read out the arguments inside your Web Worker script like so:
 
 ```javascript
 self.onmessage = e => {
@@ -99,7 +99,7 @@ To do this, inside your Web Worker program, you could request a response handler
 
 ```javascript
 self.postMessage({
-    type: 'requestHandler',
+    type: 'handler',
     handler: 'navigate',
     href: 'https://google.com'
 })
@@ -116,6 +116,36 @@ chery.addResponseHandler({
 ```
 
 Now, whenever you run the command `opengoogle`, the Web Worker will send a URL through Chery back to the webpage and the `navigate` handler will use this URL to navigate away from the page.
+
+### Sending back data from the Web Worker
+Typically, Web Workers interact with Chery by sending messages using `self.postMessage()`. Chery expects all messages to be an object that has a `type` to determine what to do with the message. The following `type`s are supported:
+
+#### `type: 'output'`
+For printing text on the screen. The text should be added in an attribute called `content`
+```javascript
+self.postMessage({
+    type: 'output',
+    content: 'Hello World'
+})
+```
+#### `type: 'error'`
+For printing text inside a `<span class="error">` tag, so it can be styled using CSS. The text should be added in an attribute called `content`
+```javascript
+self.postMessage({
+    type: 'error',
+    content: 'Something went wrong'
+})
+```
+#### `type: 'handler'`
+For data that needs to be processed using a response handler. The name of the handler should be specified using the attribute `handler`. The response handler will receive the entire message object, so you can add any other attributes that you might need.
+```javascript
+self.postMessage({
+    type: 'handler',
+    handler: 'alertResponseHandler',
+    anotherAttribute: 'Here is additional data',
+    yetAnotherAttribute: 'Even more data in here'
+})
+```
 
 ### Writing advanced programs
 

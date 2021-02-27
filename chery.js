@@ -105,7 +105,7 @@ chery.parse = () => {
             chery.error(e.data.content)
             break
           // If a handler is requested, pass data to the handler function, if available
-          case 'requestHandler':
+          case 'handler':
             if (chery.handler && e.data.handler) {
               const handler = chery.handler[e.data.handler]
               if (!handler) {

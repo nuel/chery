@@ -11,7 +11,7 @@ self.onmessage = function (e) {
 
     // Request a handler named 'alert'
     self.postMessage({
-      type: 'requestHandler',
+      type: 'handler',
       handler: 'alert',
       content: e.data.content.join(' '),
       final: true
