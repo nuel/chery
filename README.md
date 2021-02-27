@@ -13,10 +13,10 @@ Here are some features:
 - Web Workers can request a frontend handler to manipulate the DOM, show an alert, navigate to a page, etcetera
 - Chery can be called programmatically from the webpage to parse commands and spawn processes
 
-Yes, with one R.
+Yes, with one R. :cherries:
 
 ## Installing
-Load `chery.js` somewhere on the page. Then put a `<div>` somewhere with #chery as ID.
+Load `chery.js` somewhere on the page. Then put a `<div>` somewhere with `#chery` as ID.
 
 If you don't add an element, Chery will attach itself to the body of the page. This is for full page Chery that you can, for instance, run in an iframe.
 
