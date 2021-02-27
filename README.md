@@ -1,6 +1,8 @@
 # Chery :cherries:
 
-Chery is a modular Command Line Interface for the DOM and a platform for spawning Web Workers to run JavaScript files as programs. [Demo &rarr;](https://nuel.pw/chery)
+Chery is a modular Command Line Interface for the DOM and a platform for spawning Web Workers to run JavaScript files as programs. [Demo on nuel.pw &rarr;](https://nuel.pw/chery)
+
+![Screenshot of Chery](https://user-images.githubusercontent.com/66974415/109370241-cc70a680-789f-11eb-8383-7b2cbc8a515a.png)
 
 Here are some features:
 
